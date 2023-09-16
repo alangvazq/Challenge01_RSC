@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// Primary
+$Light-red: hsl(0, 100%, 67%);
+$Orangey-yellow: hsl(39, 100%, 56%);
+$Green-teal: hsl(166, 100%, 37%);
+$Cobalt-blue: hsl(234, 85%, 45%);
+
+$Light-red-opacity: hsla(0, 100%, 67%, 0.3);
+$Orangey-yellow-opacity: hsla(39, 100%, 56%, 0.3);
+$Green-teal-opacity: hsla(166, 100%, 37%, 0.3);
+$Cobalt-blue-opacity: hsla(234, 85%, 45%, 0.3);
+
+//Gradients
+$Light-slate-blue: hsl(252, 100%, 67%);
+$Light-royal-blue: hsl(241, 81%, 54%);
+$Violet-blue: hsla(256, 72%, 46%, 1);
+$Persian-blue: hsla(241, 72%, 46%, 0);
+
+//Neutral
+$White: hsl(0, 0%, 100%);
+$Pale-blue: hsl(221, 100%, 96%);
+$Light-lavender: hsl(241, 100%, 89%);
+$Dark-gray-blue: hsl(224, 30%, 27%);
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin result_box(){
+    width: 375px;
+    height: 375px;
+    background: linear-gradient($Light-slate-blue, $Light-royal-blue);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+@mixin circle(){
+    width: 125px;
+    height: 125px;
+    border-radius: 100%;
+    background: linear-gradient($Violet-blue, $Persian-blue);
+    font-family: 'Hanken Grotesk', sans-serif;
+    text-align: center;
+}
+
+@mixin summary_box(){
+    font-family: 'Hanken Grotesk', sans-serif;
+    background: $Light-red-opacity;
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+
+.result{
+    @include result_box();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    h3{
+        color: $Pale-blue;
+    }
+
+    h1{
+        color: $White;
+    }
+
+    p{
+        font-size: small;
+        text-align: center;
+        color:$Light-lavender;
+        width: 240px;
+    }
+}
+
+.circle{
+    @include circle();
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    span{
+    display: block;
+    color: $White;
+    font-weight: 700;
+    font-size: 50px;
+    }
+
+    p{
+        color: $Light-lavender;
+    }
+}
+
+.summary{
+    img{
+        height: 20px;
+    }
+
+    div{
+        @include summary_box();
+    }
+}
+
+
+
