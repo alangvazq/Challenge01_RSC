@@ -27,9 +27,12 @@ $Neutral_3: hsl(241, 100%, 89%);
 $Neutral_4: hsl(224, 30%, 27%);
 
 body {
+    height: 100vh;
+
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 @mixin result_box() {
@@ -66,7 +69,7 @@ body {
     width: 300px;
     height: 60px;
     background-color: $Neutral_4;
-    border: none;
+    border-style:none;
     border-radius: 100px;
 
     font-family: 'Hanken Grotesk', sans-serif;
@@ -125,17 +128,22 @@ body {
         height: 20px;
     }
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 #summary_t {
     color: $Neutral_4;
     font-family: 'Hanken Grotesk', sans-serif;
     width: 300px;
-    text-align: left;
-    margin: 20px;
+    
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.summary div:nth-child(1) {
+.summary div:nth-child(2) {
     @include summary_box($color_b: $Primary-1-opacity);
 
     h4 {
@@ -143,7 +151,7 @@ body {
     }
 }
 
-.summary div:nth-child(2) {
+.summary div:nth-child(3) {
     @include summary_box($color_b: $Primary-2-opacity);
 
     h4 {
@@ -151,7 +159,7 @@ body {
     }
 }
 
-.summary div:nth-child(3) {
+.summary div:nth-child(4) {
     @include summary_box($color_b: $Primary-3-opacity);
 
     h4 {
@@ -159,7 +167,7 @@ body {
     }
 }
 
-.summary div:nth-child(4) {
+.summary div:nth-child(5) {
     @include summary_box($color_b: $Primary-4-opacity);
 
     h4 {
@@ -179,4 +187,30 @@ body {
 
 button {
     @include button();
+}
+
+@media (min-width: 700px){
+    body{
+        flex-direction: row;
+        justify-content: center;
+
+
+    }
+
+    .result{
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+    }
+
+    .summary{
+    width: 375px;
+    height: 375px;
+    background-color: $Neutral_1;
+
+    border-radius: 25px;
+
+    box-shadow: 25px 25px 81px -34px rgba(0,0,0,0.5);
+    }
+
+
 }
