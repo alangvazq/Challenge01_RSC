@@ -32,16 +32,17 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
 }
 
 @mixin result_box() {
     width: 375px;
-    height: 375px;
+    height: 390px;
     background: linear-gradient($Gradient-box-1, $Gradient-box-2);
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
     font-family: 'Hanken Grotesk', sans-serif;
+
 }
 
 @mixin circle() {
@@ -55,28 +56,27 @@ body {
 
 @mixin summary_box($color_b: $Primary-1-opacity) {
     font-family: 'Hanken Grotesk', sans-serif;
+
     background-color: $color_b;
     width: 300px;
     height: 50px;
     border-radius: 10px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 50px 1fr 100px;
     align-items: center;
-    margin-bottom: 10px;
 }
 
 @mixin button() {
     width: 300px;
     height: 60px;
     background-color: $Neutral_4;
-    border-style:none;
+    border-style: none;
     border-radius: 100px;
 
     font-family: 'Hanken Grotesk', sans-serif;
     color: $Neutral_1;
     font-size: large;
-    margin-top: 10px;
-    margin-bottom: 25px;
+    margin: 10px;
 
     cursor: pointer;
 }
@@ -89,18 +89,22 @@ body {
     justify-content: space-evenly;
 
     h3 {
-        color: $Neutral_2;
+        color: $Neutral_3;
+        font-size: large;
+        font-weight: 500;
     }
 
     h1 {
         color: $Neutral_1;
+        text-align: center;
+        padding-bottom: 10px;
     }
 
     p {
-        font-size: small;
+        font-size: 18px;
         text-align: center;
         color: $Neutral_3;
-        width: 240px;
+        width: 290px;
     }
 }
 
@@ -120,13 +124,17 @@ body {
 
     p {
         color: $Neutral_3;
+        font-size: medium;
     }
 }
 
 .summary {
     img {
         height: 20px;
+        justify-self: center;
     }
+
+    height: 390px;
 
     display: flex;
     flex-direction: column;
@@ -137,10 +145,11 @@ body {
 #summary_t {
     color: $Neutral_4;
     font-family: 'Hanken Grotesk', sans-serif;
+    font-size: large;
+    font-weight: 700;
     width: 300px;
-    
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 10px;
+
 }
 
 .summary div:nth-child(2) {
@@ -183,34 +192,84 @@ body {
 
 .summary div p {
     color: $Neutral_3;
+    justify-self: center;
 }
 
 button {
     @include button();
 }
 
-@media (min-width: 700px){
-    body{
+button:hover {
+    background: linear-gradient($Gradient-box-1, $Gradient-box-2);
+}
+
+@media (min-width: 700px) {
+    body {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto 1rem;
+
+
         flex-direction: row;
         justify-content: center;
 
 
     }
 
-    .result{
+    .result {
+        height: 500px;
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
+        grid-row: 1/2;
+
+        h3 {
+            font-size: 25px;
+        }
+
+        p {
+            width: 250px;
+        }
     }
 
-    .summary{
-    width: 375px;
-    height: 375px;
-    background-color: $Neutral_1;
+    .circle {
+        height: 180px;
+        width: 180px;
 
-    border-radius: 25px;
+        span {
+            font-size: 70px;
+        }
 
-    box-shadow: 25px 25px 81px -34px rgba(0,0,0,0.5);
     }
 
+    // not centered
+    .summary {
+        width: 425px;
+        height: 500px;
+        background-color: $Neutral_1;
 
+        border-radius: 25px;
+
+        box-shadow: 25px 25px 81px -35px rgba(0, 0, 0, 0.5);
+
+        grid-row: 1/2;
+
+        padding-left: 50px;
+
+        position: relative;
+        left: -50px;
+        z-index: -1;
+    }
+
+    #summary_t {
+        font-size: 25px;
+        margin: 20px;
+    }
+
+    button {
+        margin: 35px;
+    }
+
+    .attribution {
+        grid-column: 1/3;
+    }
 }
