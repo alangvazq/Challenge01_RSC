@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [](https://github.com/alangvazq/Challenge01_RSC)
-- Live Site URL: [](https://alangvazq.github.io/Challenge01_RSC/)
+- Solution URL: [GitHub repository](https://github.com/alangvazq/Challenge01_RSC)
+- Live Site URL: [GitHub pages](https://alangvazq.github.io/Challenge01_RSC/)
 
 ## My process
 
