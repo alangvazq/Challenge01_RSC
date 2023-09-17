@@ -22,16 +22,19 @@ body {
   align-items: center;
   justify-content: space-evenly;
 }
+
 .result h3 {
   color: hsl(241, 100%, 89%);
   font-size: large;
   font-weight: 500;
 }
+
 .result h1 {
   color: hsl(0, 0%, 100%);
   text-align: center;
   padding-bottom: 10px;
 }
+
 .result p {
   font-size: 18px;
   text-align: center;
@@ -50,12 +53,14 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .circle span {
   display: block;
   color: hsl(0, 0%, 100%);
   font-weight: 700;
   font-size: 50px;
 }
+
 .circle p {
   color: hsl(241, 100%, 89%);
   font-size: medium;
@@ -68,6 +73,7 @@ body {
   align-items: center;
   justify-content: space-evenly;
 }
+
 .summary img {
   height: 20px;
   justify-self: center;
@@ -92,6 +98,7 @@ body {
   grid-template-columns: 50px 1fr 100px;
   align-items: center;
 }
+
 .summary div:nth-child(2) h4 {
   color: hsl(0, 100%, 67%);
 }
@@ -106,6 +113,7 @@ body {
   grid-template-columns: 50px 1fr 100px;
   align-items: center;
 }
+
 .summary div:nth-child(3) h4 {
   color: hsl(39, 100%, 56%);
 }
@@ -120,6 +128,7 @@ body {
   grid-template-columns: 50px 1fr 100px;
   align-items: center;
 }
+
 .summary div:nth-child(4) h4 {
   color: hsl(166, 100%, 37%);
 }
@@ -134,6 +143,7 @@ body {
   grid-template-columns: 50px 1fr 100px;
   align-items: center;
 }
+
 .summary div:nth-child(5) h4 {
   color: hsl(234, 85%, 45%);
 }
@@ -162,7 +172,7 @@ button {
 }
 
 button:hover {
-  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  background-color: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
 }
 
 @media (min-width: 700px) {
@@ -173,25 +183,33 @@ button:hover {
     flex-direction: row;
     justify-content: center;
   }
+
   .result {
     height: 500px;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     grid-row: 1/2;
+    position: relative;
+    right: -25px;
   }
+
   .result h3 {
     font-size: 25px;
   }
+
   .result p {
     width: 250px;
   }
+
   .circle {
     height: 180px;
     width: 180px;
   }
+
   .circle span {
     font-size: 70px;
   }
+
   .summary {
     width: 425px;
     height: 500px;
@@ -201,16 +219,19 @@ button:hover {
     grid-row: 1/2;
     padding-left: 50px;
     position: relative;
-    left: -50px;
+    left: -25px;
     z-index: -1;
   }
+
   #summary_t {
     font-size: 25px;
     margin: 20px;
   }
+
   button {
     margin: 35px;
   }
+
   .attribution {
     grid-column: 1/3;
   }

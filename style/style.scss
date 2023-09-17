@@ -200,7 +200,7 @@ button {
 }
 
 button:hover {
-    background: linear-gradient($Gradient-box-1, $Gradient-box-2);
+    background-color: linear-gradient($Gradient-box-1, $Gradient-box-2);
 }
 
 @media (min-width: 700px) {
@@ -221,6 +221,9 @@ button:hover {
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
         grid-row: 1/2;
+
+        position: relative;
+        right: -25px;
 
         h3 {
             font-size: 25px;
@@ -256,7 +259,7 @@ button:hover {
         padding-left: 50px;
 
         position: relative;
-        left: -50px;
+        left: -25px;
         z-index: -1;
     }
 
@@ -268,6 +271,7 @@ button:hover {
     button {
         margin: 35px;
     }
+
 
     .attribution {
         grid-column: 1/3;
