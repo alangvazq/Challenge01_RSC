@@ -26,13 +26,11 @@ $Neutral_2: hsl(221, 100%, 96%);
 $Neutral_3: hsl(241, 100%, 89%);
 $Neutral_4: hsl(224, 30%, 27%);
 
-body {
+main {
     height: 100vh;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 @mixin result_box() {
@@ -42,7 +40,6 @@ body {
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
     font-family: 'Hanken Grotesk', sans-serif;
-
 }
 
 @mixin circle() {
@@ -56,7 +53,6 @@ body {
 
 @mixin summary_box($color_b: $Primary-1-opacity) {
     font-family: 'Hanken Grotesk', sans-serif;
-
     background-color: $color_b;
     width: 300px;
     height: 50px;
@@ -72,12 +68,10 @@ body {
     background-color: $Neutral_4;
     border-style: none;
     border-radius: 100px;
-
     font-family: 'Hanken Grotesk', sans-serif;
     color: $Neutral_1;
     font-size: large;
     margin: 10px;
-
     cursor: pointer;
 }
 
@@ -114,7 +108,6 @@ body {
     align-items: center;
     justify-content: center;
 
-
     span {
         display: block;
         color: $Neutral_1;
@@ -135,7 +128,6 @@ body {
     }
 
     height: 390px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -149,10 +141,9 @@ body {
     font-weight: 700;
     width: 300px;
     margin: 10px;
-
 }
 
-.summary div:nth-child(2) {
+.summary section:nth-child(2) {
     @include summary_box($color_b: $Primary-1-opacity);
 
     h4 {
@@ -160,7 +151,7 @@ body {
     }
 }
 
-.summary div:nth-child(3) {
+.summary section:nth-child(3) {
     @include summary_box($color_b: $Primary-2-opacity);
 
     h4 {
@@ -168,7 +159,7 @@ body {
     }
 }
 
-.summary div:nth-child(4) {
+.summary section:nth-child(4) {
     @include summary_box($color_b: $Primary-3-opacity);
 
     h4 {
@@ -176,7 +167,7 @@ body {
     }
 }
 
-.summary div:nth-child(5) {
+.summary section:nth-child(5) {
     @include summary_box($color_b: $Primary-4-opacity);
 
     h4 {
@@ -184,13 +175,12 @@ body {
     }
 }
 
-.summary div span {
+.summary section b {
     color: $Neutral_4;
     font-weight: 700;
-
 }
 
-.summary div p {
+.summary section p {
     color: $Neutral_3;
     justify-self: center;
 }
@@ -200,20 +190,16 @@ button {
 }
 
 button:hover {
-    background-color: linear-gradient($Gradient-box-1, $Gradient-box-2);
+    background: linear-gradient($Gradient-box-1, $Gradient-box-2);
 }
 
-@media (min-width: 700px) {
-    body {
+@media (min-width: 1440px) {
+    main {
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: auto 1rem;
-
-
         flex-direction: row;
         justify-content: center;
-
-
     }
 
     .result {
@@ -221,9 +207,9 @@ button:hover {
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
         grid-row: 1/2;
-
         position: relative;
         right: -25px;
+        z-index: 1;
 
         h3 {
             font-size: 25px;
@@ -241,26 +227,18 @@ button:hover {
         span {
             font-size: 70px;
         }
-
     }
 
-    // not centered
     .summary {
         width: 425px;
         height: 500px;
         background-color: $Neutral_1;
-
         border-radius: 25px;
-
         box-shadow: 25px 25px 81px -35px rgba(0, 0, 0, 0.5);
-
         grid-row: 1/2;
-
         padding-left: 50px;
-
         position: relative;
         left: -25px;
-        z-index: -1;
     }
 
     #summary_t {
@@ -271,7 +249,6 @@ button:hover {
     button {
         margin: 35px;
     }
-
 
     .attribution {
         grid-column: 1/3;

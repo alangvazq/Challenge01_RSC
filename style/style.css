@@ -3,7 +3,7 @@
   margin: 0;
 }
 
-body {
+main {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,19 +22,16 @@ body {
   align-items: center;
   justify-content: space-evenly;
 }
-
 .result h3 {
   color: hsl(241, 100%, 89%);
   font-size: large;
   font-weight: 500;
 }
-
 .result h1 {
   color: hsl(0, 0%, 100%);
   text-align: center;
   padding-bottom: 10px;
 }
-
 .result p {
   font-size: 18px;
   text-align: center;
@@ -53,14 +50,12 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 .circle span {
   display: block;
   color: hsl(0, 0%, 100%);
   font-weight: 700;
   font-size: 50px;
 }
-
 .circle p {
   color: hsl(241, 100%, 89%);
   font-size: medium;
@@ -73,7 +68,6 @@ body {
   align-items: center;
   justify-content: space-evenly;
 }
-
 .summary img {
   height: 20px;
   justify-self: center;
@@ -88,7 +82,7 @@ body {
   margin: 10px;
 }
 
-.summary div:nth-child(2) {
+.summary section:nth-child(2) {
   font-family: "Hanken Grotesk", sans-serif;
   background-color: hsla(0, 100%, 67%, 0.05);
   width: 300px;
@@ -98,12 +92,11 @@ body {
   grid-template-columns: 50px 1fr 100px;
   align-items: center;
 }
-
-.summary div:nth-child(2) h4 {
+.summary section:nth-child(2) h4 {
   color: hsl(0, 100%, 67%);
 }
 
-.summary div:nth-child(3) {
+.summary section:nth-child(3) {
   font-family: "Hanken Grotesk", sans-serif;
   background-color: hsla(39, 100%, 56%, 0.05);
   width: 300px;
@@ -113,12 +106,11 @@ body {
   grid-template-columns: 50px 1fr 100px;
   align-items: center;
 }
-
-.summary div:nth-child(3) h4 {
+.summary section:nth-child(3) h4 {
   color: hsl(39, 100%, 56%);
 }
 
-.summary div:nth-child(4) {
+.summary section:nth-child(4) {
   font-family: "Hanken Grotesk", sans-serif;
   background-color: hsla(166, 100%, 37%, 0.05);
   width: 300px;
@@ -128,12 +120,11 @@ body {
   grid-template-columns: 50px 1fr 100px;
   align-items: center;
 }
-
-.summary div:nth-child(4) h4 {
+.summary section:nth-child(4) h4 {
   color: hsl(166, 100%, 37%);
 }
 
-.summary div:nth-child(5) {
+.summary section:nth-child(5) {
   font-family: "Hanken Grotesk", sans-serif;
   background-color: hsla(234, 85%, 45%, 0.05);
   width: 300px;
@@ -143,17 +134,16 @@ body {
   grid-template-columns: 50px 1fr 100px;
   align-items: center;
 }
-
-.summary div:nth-child(5) h4 {
+.summary section:nth-child(5) h4 {
   color: hsl(234, 85%, 45%);
 }
 
-.summary div span {
+.summary section b {
   color: hsl(224, 30%, 27%);
   font-weight: 700;
 }
 
-.summary div p {
+.summary section p {
   color: hsl(241, 100%, 89%);
   justify-self: center;
 }
@@ -172,18 +162,17 @@ button {
 }
 
 button:hover {
-  background-color: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
 }
 
-@media (min-width: 700px) {
-  body {
+@media (min-width: 1440px) {
+  main {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto 1rem;
     flex-direction: row;
     justify-content: center;
   }
-
   .result {
     height: 500px;
     border-top-left-radius: 25px;
@@ -191,25 +180,21 @@ button:hover {
     grid-row: 1/2;
     position: relative;
     right: -25px;
+    z-index: 1;
   }
-
   .result h3 {
     font-size: 25px;
   }
-
   .result p {
     width: 250px;
   }
-
   .circle {
     height: 180px;
     width: 180px;
   }
-
   .circle span {
     font-size: 70px;
   }
-
   .summary {
     width: 425px;
     height: 500px;
@@ -220,18 +205,14 @@ button:hover {
     padding-left: 50px;
     position: relative;
     left: -25px;
-    z-index: -1;
   }
-
   #summary_t {
     font-size: 25px;
     margin: 20px;
   }
-
   button {
     margin: 35px;
   }
-
   .attribution {
     grid-column: 1/3;
   }
