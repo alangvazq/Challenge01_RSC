@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/alangvazq/Challenge01_RSC)
-- Live Site URL: [Add live site URL here](https://alangvazq.github.io/Challenge01_RSC/)
+- Solution URL: [](https://github.com/alangvazq/Challenge01_RSC)
+- Live Site URL: [](https://alangvazq.github.io/Challenge01_RSC/)
 
 ## My process
 
@@ -86,7 +86,7 @@ section {
 
 ### Useful resources
 
-- [Example resource 1](https://sass-lang.com/documentation/style-rules/declarations/) - This helped me to learn property declarations.
+- [SASS declarations](https://sass-lang.com/documentation/style-rules/declarations/) - This helped me to learn property declarations.
 
 ## Author
 
